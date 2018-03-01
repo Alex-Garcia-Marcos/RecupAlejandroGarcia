@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alex.recupalejandrogarcia.MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:text="Localizador Poblaciones"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
+
+    <EditText
+        android:id="@+id/etLocalidad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="12dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="46dp"
+        android:ems="10"
+        android:hint="Introduzca Localidad"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/btnBuscar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/etLocalidad"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:onClick="buscar"
+        android:text="Buscar" />
+
+    <TextView
+        android:id="@+id/tvLatitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/etLocalidad"
+        android:layout_alignStart="@+id/etLocalidad"
+        android:layout_below="@+id/btnBuscar"
+        android:layout_marginTop="52dp"
+        android:text="Latitud:" />
+
+    <TextView
+        android:id="@+id/tvLongitud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLatitud"
+        android:layout_alignStart="@+id/tvLatitud"
+        android:layout_below="@+id/tvLatitud"
+        android:layout_marginTop="54dp"
+        android:text="Longitud:" />
+
+    <TextView
+        android:id="@+id/tvCodigoPais"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvLongitud"
+        android:layout_alignStart="@+id/tvLongitud"
+        android:layout_below="@+id/tvLongitud"
+        android:layout_marginTop="65dp"
+        android:text="Codigo de pais:" />
+
+    <Button
+        android:id="@+id/btnMostrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tvCodigoPais"
+        android:layout_marginTop="15dp"
+        android:enabled="false"
+        android:onClick="mostrar"
+        android:text="Mostrar en mapa" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tvCodigoPais"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/tvCodigoPais"
+        android:layout_marginBottom="12dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginStart="11dp"
+        android:onClick="guardarLocalidad"
+        android:text="Guardar localidad" />
+
+    <Button
+        android:id="@+id/btnCargar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/btnGuardar"
+        android:layout_alignBottom="@+id/btnGuardar"
+        android:layout_alignEnd="@+id/btnBuscar"
+        android:layout_alignRight="@+id/btnBuscar"
+        android:onClick="cargarLocalidad"
+        android:text="Cargar localidad" />
+</RelativeLayout>
